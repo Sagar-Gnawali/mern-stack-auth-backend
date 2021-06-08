@@ -55,7 +55,7 @@ route.get('/', requireLogin, async (req, res) => {
         const user = await userModel.findById(req.user._id).select('-password');
         res.json(user);
     } catch (error) {
-        console.log('something went wrong in check');
+        console.log('something went wrong in check');   
     }
 })
 module.exports = route;
